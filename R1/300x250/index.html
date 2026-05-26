@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.14.2_min.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://www.pnc.com/es/personal-banking/brilliantly-boring.html";
+    </script>
+  </head>
+
+  <body onload="init()">
+    <div id="main_container">
+      <!--start main_container-->
+      <div id="main_content">
+        <!-- <img src="images/f1.jpg" style="opacity: .5; z-index: 111;" class="full-width" alt=""> -->
+        <div class="copy copy1">
+          <span>Amigable</span>
+          <span>como un vecino.</span>
+        </div>
+        <div class="copy copy2">
+          <span>Con las ventajas de</span><span>ser un banco grande.</span>
+        </div>
+
+        <div id="cta">Más información <span>>></span></div>
+
+        <div class="tag">
+          <span>BRILLANTEMENTE</span><span>ABURRID<img src="images/logo-small.png" alt=""></span><span>DESDE 1865<sup>™</sup> </span>
+        </div>
+        <div class="tagBg hidden"></div>
+        <img src="images/logo-new.png" class="logo" alt="">
+
+        
+      </div>
+
+        <div id="default_exit" class="btn"></div>
+        <div id="rollbtn">MÁS DETALLES</div>
+        <div class="rollover" id="rollover">
+              Brillantemente Aburrido desde 1865 es<br>una marca de servicio de The PNC<br>Financial Services Group, Inc.<br><br>
+              ©2026 The PNC Financial Services Group,<br>Inc. Todos los derechos reservados. PNC<br>Bank, National Association. <span>Miembro FDIC.</span><br><br>
+              Aunque PNC proporciona algunos servicios<br>de apoyo en español, los productos y<br>servicios de PNC se cumplen y se atienden<br>principalmente en inglés.
+              <img src="images/X.svg" id="closeBtn" alt="Close Button">
+        </div>
+      <!--end main_container-->
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      document
+        .getElementById("default_exit")
+        .addEventListener("click", function () {
+          window.open(clickTag, "_blank");
+        });
+    </script>
+  </body>
+</html>

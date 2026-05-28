@@ -69,8 +69,13 @@ video {
   font-weight: normal;
 }
 @font-face {
-  font-family: "regular_font";
-  src: url("fonts/PNCBrandReg.otf");
+  font-family: "PNCReg";
+  src: url("fonts/subset-PNCBrandReg.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PNCBold";
+  src: url("fonts/subset-PNCBrand-Bold.woff");
   font-weight: normal;
 }
 
@@ -97,7 +102,7 @@ video {
   display: block;
 }
 #rollbtn{
-  font-family: "heading_font";
+  font-family: "PNCBold";
   color: #333f48;
   background-color: #ededee;
   font-size: 11.5px;
@@ -105,7 +110,7 @@ video {
   right: 9px;
   width: 94px;
   height: 15px;
-  line-height: 17px;
+  line-height: 15px;
   z-index: 501;
   cursor: pointer;
 }
@@ -119,7 +124,7 @@ video {
   height: 15px;
 }
 .rollover{
-  font-family: "regular_font";
+  font-family: "PNCReg";
   color: #333f48;
   font-size: 15px;
   line-height: 18px;
@@ -140,7 +145,7 @@ video {
   visibility:visible;
 }
 .rollover span{
-  font-family: "heading_font";
+  font-family: "PNCBold";
   font-size: 14px;
 }
 #cta{

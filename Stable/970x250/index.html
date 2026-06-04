@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.14.2_min.js"></script>
+    <script type="text/javascript">
+      var clickTag = "https://www.pnc.com/es/personal-banking/brilliantly-boring.html";
+    </script>
+  </head>
+
+  <body onload="init()">
+    <div id="main_container">
+      <!--start main_container-->
+      <div id="main_content">
+        <!-- <img src="images/f1.jpg" style="opacity: .5; z-index: 111;" class="full-width" alt=""> -->
+        <div class="copy copy1">
+          <span>Estables desde 1865.</span>
+        </div>
+        <div class="copy copy2">
+          <span>Confiables, siempre.</span>
+        </div>
+
+        <div id="cta">Más información <span>>></span></div>
+        <img src="images/logo.png" class="full-width" alt="">
+        
+      </div>
+
+        <div id="default_exit" class="btn"></div>
+        <div id="rollbtn">MÁS DETALLES</div>
+        <div class="rollover" id="rollover">
+              <div>Aunque PNC proporciona algunos servicios de apoyo en español, los productos y servicios de PNC se cumplen y se atienden principalmente en inglés.</div>
+              <div>Brillantemente Aburrido desde 1865 es una marca de servicio de The PNC Financial Services Group, Inc.</div>
+              <div>©2026 The PNC Financial Services Group, Inc. Todos los derechos reservados. PNC Bank, National Association. <span>Miembro FDIC.</span></div>
+              <img src="images/X.svg" id="closeBtn" alt="Close Button">
+        </div>
+      <!--end main_container-->
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript">
+      document
+        .getElementById("default_exit")
+        .addEventListener("click", function () {
+          window.open(clickTag, "_blank");
+        });
+    </script>
+  </body>
+</html>

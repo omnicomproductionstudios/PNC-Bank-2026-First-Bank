@@ -20,6 +20,10 @@ function animate() {
     .staggerFrom(".copy1 span", 1, { y: 60, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1")
     .staggerFrom(".copy2 span", 1, { y: 60, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1+=1.3")
     .from("#cta", 1, { y: 40, autoAlpha: 0, ease: "Power2.easeInOut" }, "frame1+=2.6")
+  tl.addLabel("frame2", "frame1+=3.3")
+    .to(".logo", 0.7, {x:-137, ease: "Power2.easeInOut" }, "frame2")
+    .to(".tagBg", 0.7, {autoAlpha: 1, ease: "Power2.easeInOut" }, "frame2+=0.5")
+    .staggerFrom(".tag span", 0.7, { x: -80, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame2+=1")
 }
 
 function setupDisclaimer() {

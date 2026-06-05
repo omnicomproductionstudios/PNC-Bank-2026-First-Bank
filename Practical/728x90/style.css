@@ -146,7 +146,7 @@ video {
 }
 .rollover span{
   font-family: "PNCBold";
-  font-size: 14px;
+  font-size: 12px;
 }
 .rollover div{
   position: relative;
@@ -168,7 +168,7 @@ video {
 .logo{
   width: 134px;
   bottom: 34px;
-  left: 558px;
+  left: 576px;
 }
 .tagBg{
   background: #333f48;

@@ -9,28 +9,38 @@ function init() {
   animate();
   setRollover();
   setupDisclaimer();
+  setupRolloverScroll();
 }
 gsap.config({
     force3D: true
   });
 function animate() {
   tl.set("#main_content", { autoAlpha: 1, force3D: true });
-  // Frame 1
+  
   tl.addLabel("frame1", 0)
-    .to(".logo", 0.7, {x:-66, ease: "Power2.easeInOut" }, "frame1+=0.7")
-    .to(".tagBg", 0.7, {autoAlpha: 1, ease: "Power2.easeInOut" }, "frame1+=1")
-    .staggerFrom(".tag span", 0.7, { x: -80, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1+=1.3")
+    .staggerFrom(".copy1 span", 1, { y: 50, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1")
+    .staggerTo(".copy1 span", 1, { y: -100, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1+=2.5")
+    .staggerFrom(".copy2 span", 1, { y: 50, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1+=3")
+    .staggerTo(".copy2 span", 1, { y: -100, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame1+=6")
+
+  tl.addLabel("frame2", "frame1+=7")
+    .to(".logo", 0.5, { autoAlpha:1, ease: "Power2.easeInOut" }, "frame2")
+    .to(".logo", 0.7, {x:-66, autoAlpha:1, ease: "Power2.easeInOut" }, "frame2+=0.5")
+    .to(".tagBg", 0.7, {autoAlpha: 1, ease: "Power2.easeInOut" }, "frame2+=0.7")
+    .staggerFrom(".tag span", 0.7, { x: -80, autoAlpha: 0, ease: "Power2.easeInOut" }, 0.05, "frame2+=1.2")
 }
 
 function setupDisclaimer() {
   const rollBtn = document.getElementById("rollbtn");
   const rollover = document.getElementById("rollover");
   const closeBtn = document.getElementById("closeBtn");
+  const rollContent = document.getElementById("rollContent");
 
   // open disclaimer
   rollBtn.addEventListener("click", function(e){
     e.stopPropagation();
     rollover.classList.add("show");
+    rollContent.scrollTop = 0;
     tl.pause();
   });
 
@@ -38,9 +48,42 @@ function setupDisclaimer() {
   closeBtn.addEventListener("click", function(e){
     e.stopPropagation();
     rollover.classList.remove("show");
+    stopRolloverScroll();
 
     tl.restart(); // replay from start
   });
+}
+
+let rolloverScrollTimer;
+
+function setupRolloverScroll() {
+  const scrollUp = document.getElementById("scrollUp");
+  const scrollDown = document.getElementById("scrollDown");
+
+  scrollUp.addEventListener("mouseenter", function(e) {
+    e.stopPropagation();
+    startRolloverScroll(-1);
+  });
+  scrollUp.addEventListener("mouseleave", stopRolloverScroll);
+
+  scrollDown.addEventListener("mouseenter", function(e) {
+    e.stopPropagation();
+    startRolloverScroll(1);
+  });
+  scrollDown.addEventListener("mouseleave", stopRolloverScroll);
+}
+
+function startRolloverScroll(direction) {
+  const rollContent = document.getElementById("rollContent");
+
+  stopRolloverScroll();
+  rolloverScrollTimer = setInterval(function() {
+    rollContent.scrollTop += direction * 2;
+  }, 30);
+}
+
+function stopRolloverScroll() {
+  clearInterval(rolloverScrollTimer);
 }
 
 function setRollover() {

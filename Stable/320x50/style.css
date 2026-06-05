@@ -87,16 +87,18 @@ video {
 .copy{
   font-family: "heading_font";
   color: #fff;
-  font-size: 20.1px;
+  font-size: 27px;
   line-height: 24px;
   text-align: center;
   width: 100%;
-  top: 32.3px;
+  top: 10px;
   left: 0;
 }
 .copy2{
-  top: 85px;
-  color:#ef6a00;
+  top: 10px;
+  color: #ef6a00;
+  font-size: 25px;
+  line-height: 21px;
 }
 .copy span{
   display: block;
@@ -121,15 +123,15 @@ video {
   right: 7px;
   cursor: pointer;
   z-index: 503;
-  width: 6px;
-  height: 9px;
+  width: 8px;
+  height: 10px;
 }
-.rollover{
+.rollover {
   word-wrap: break-word;
   font-family: "PNCReg";
   color: #333f48;
-  font-size: 6.4px;
-  line-height: 7px;
+  font-size: 12px;
+  line-height: 15px;
   inset: 0;
   padding: 3px 5px;
   width: 100%;
@@ -140,7 +142,9 @@ video {
   opacity: 0;
   visibility: hidden;
   transition: all .3s ease;
-  padding-right: 12px;
+  padding-right: 19px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .rollover.show{
   opacity:1;
@@ -148,11 +152,36 @@ video {
 }
 .rollover span{
   font-family: "PNCBold";
-  font-size: 6px;
+  font-size: 11px;
 }
-.rollover div{
+.roll-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.roll-content div{
   position: relative;
   margin-bottom: 3px;
+}
+.roll-arrow {
+  right: 7px;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  z-index: 503;
+}
+.roll-arrow-up {
+  top: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid #333f48;
+}
+.roll-arrow-down {
+  bottom: 23px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #333f48;
 }
 #cta{
   font-family: "heading_font";

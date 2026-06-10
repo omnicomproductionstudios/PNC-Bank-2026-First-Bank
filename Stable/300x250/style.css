@@ -127,7 +127,7 @@ video {
 .rollover{
   font-family: "PNCReg";
   color: #333f48;
-  font-size: 10px;
+  font-size: 15px;
   line-height: 18px;
   inset: 0;
   padding: 10px 10px;
@@ -147,7 +147,7 @@ video {
 }
 .rollover span{
   font-family: "PNCBold";
-  font-size: 14px;
+  font-size: 15px;
 }
 .rollover div{
   position: relative;
